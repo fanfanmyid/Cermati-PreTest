@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0.1 (Python 3.9.6 on darwin)" generated="2024-09-16T10:57:39.018148" rpa="false" schemaversion="5">
+<suite id="s1" name="Cermati-TechnicalTest" source="/Users/fandly/Documents/Cermati-TechnicalTest">
+<suite id="s1-s1" name="Q4-Cermati" source="/Users/fandly/Documents/Cermati-TechnicalTest/Q4-Cermati.robot">
+<test id="s1-s1-t1" name="User Successfuly Register" line="14">
+<kw name="Given The user is on the register page">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-09-16T10:57:39.135267" level="INFO">Opening browser 'Chrome' to base url 'https://www.cermati.com/app/gabung'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-09-16T10:57:39.134988" elapsed="3.439750"/>
+</kw>
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>0.5s</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2024-09-16T10:57:42.577278" elapsed="0.001498"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-09-16T10:57:42.578932" elapsed="0.819263"/>
+</kw>
+<status status="PASS" start="2024-09-16T10:57:39.134718" elapsed="4.263702"/>
+</kw>
+<kw name="When The user fill the Phone Number">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-09-16T10:57:43.401281" level="INFO">Typing text '085146030521' into text field 'id:mobilePhone'.</msg>
+<arg>id:mobilePhone</arg>
+<arg>${PHONE_NUMBER}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-16T10:57:43.400706" elapsed="1.836385"/>
+</kw>
+<status status="PASS" start="2024-09-16T10:57:43.399992" elapsed="1.838686"/>
+</kw>
+<kw name="And The user fill the Email">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-09-16T10:57:45.242729" level="INFO">Typing text 'fandlyfr@gmail.com' into text field 'id:email'.</msg>
+<arg>id:email</arg>
+<arg>${EMAIL}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-16T10:57:45.241790" elapsed="1.614589"/>
+</kw>
+<status status="PASS" start="2024-09-16T10:57:45.239991" elapsed="1.616643"/>
+</kw>
+<kw name="And The user fill the First Name">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-09-16T10:57:46.857838" level="INFO">Typing text 'fandlyfr' into text field 'id:firstName'.</msg>
+<arg>id:firstName</arg>
+<arg>${FIRST_NAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-16T10:57:46.857551" elapsed="1.606122"/>
+</kw>
+<status status="PASS" start="2024-09-16T10:57:46.857096" elapsed="1.607008"/>
+</kw>
+<kw name="And The user fill the Last Name">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-09-16T10:57:48.466266" level="INFO">Typing text 'muhammad' into text field 'id:lastName'.</msg>
+<arg>id:lastName</arg>
+<arg>${LAST_NAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-16T10:57:48.465770" elapsed="1.581744"/>
+</kw>
+<status status="PASS" start="2024-09-16T10:57:48.464880" elapsed="1.583497"/>
+</kw>
+<kw name="Then Click Register Button">
+<kw name="Element Should Be Enabled" owner="SeleniumLibrary">
+<arg>xpath://button[contains(@class, 'RegistrationForm_form-container__button')]</arg>
+<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<status status="PASS" start="2024-09-16T10:57:50.051211" elapsed="1.540048"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-09-16T10:57:51.593407" level="INFO">Clicking button 'xpath://button[contains(@class, 'RegistrationForm_form-container__button')]'.</msg>
+<arg>xpath://button[contains(@class, 'RegistrationForm_form-container__button')]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-16T10:57:51.592396" elapsed="2.622563"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<msg time="2024-09-16T10:58:25.091935" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-6.png"&gt;&lt;img src="selenium-screenshot-6.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-09-16T10:58:25.093299" level="FAIL">Element 'id=“rc-anchor-container”' did not appear in 30 seconds.</msg>
+<arg>id=“rc-anchor-container”</arg>
+<arg>30s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="FAIL" start="2024-09-16T10:57:54.215192" elapsed="30.884199">Element 'id=“rc-anchor-container”' did not appear in 30 seconds.</status>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>//span[@id=‘recaptcha-anchor’]</arg>
+<arg>30s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="NOT RUN" start="2024-09-16T10:58:25.099965" elapsed="0.000116"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>//span[@id=‘recaptcha-anchor’]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-09-16T10:58:25.100186" elapsed="0.000054"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<arg>xpath://button[contains(@class, 'RegistrationForm_form-container__button')]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-09-16T10:58:25.100319" elapsed="0.000049"/>
+</kw>
+<status status="FAIL" start="2024-09-16T10:57:50.049785" elapsed="35.050736">Element 'id=“rc-anchor-container”' did not appear in 30 seconds.</status>
+</kw>
+<tag>Register</tag>
+<tag>RegressionTest</tag>
+<status status="FAIL" start="2024-09-16T10:57:39.133915" elapsed="45.966953">Element 'id=“rc-anchor-container”' did not appear in 30 seconds.</status>
+</test>
+<status status="FAIL" start="2024-09-16T10:57:39.037694" elapsed="46.063929"/>
+</suite>
+<status status="FAIL" start="2024-09-16T10:57:39.023544" elapsed="46.080577"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">Register</stat>
+<stat pass="0" fail="1" skip="0">RegressionTest</stat>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Cermati-TechnicalTest">Cermati-TechnicalTest</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1" name="Q4-Cermati">Cermati-TechnicalTest.Q4-Cermati</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
